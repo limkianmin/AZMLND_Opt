@@ -9,8 +9,9 @@ from sklearn.preprocessing import OneHotEncoder
 import pandas as pd
 from azureml.core.run import Run
 from azureml.data.dataset_factory import TabularDatasetFactory
+from typing import Tuple
 
-def clean_data(data: TabularDatasetFactory) -> :
+def clean_data(data: TabularDatasetFactory) -> Tuple[pd.DataFrame, pd.DataFrame]:
     # Dict for cleaning data
     months = {"jan":1, "feb":2, "mar":3, "apr":4, "may":5, "jun":6, "jul":7, "aug":8, "sep":9, "oct":10, "nov":11, "dec":12}
     weekdays = {"mon":1, "tue":2, "wed":3, "thu":4, "fri":5, "sat":6, "sun":7}
